@@ -93,16 +93,17 @@ treemap(url)
         };
 BoxApp.loadDropbox = function (x) {
         console.log('loading data from Dropbox.com ...');
-        var url = x[0].url;
+      //  var url = x[0].url;
 
-    treemap(url)
+    treemap(x)
 
             };
       BoxApp.loadFile = function (x) {
         console.log('loading data from local File...');
-        var url = x[0].url;
+      var fullPath = document.getElementById('localFile').value
 
-    treemap(url)
+    console.log(fullPath);
+    treemap(fullPath)
 
             };
 
