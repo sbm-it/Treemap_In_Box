@@ -108,8 +108,8 @@ d3.json(dataURIs[0], function(error, json) {
 
   initializeTreeMap(json);
     //preprocessTreemapData(json, 30);
-});
 
+});
 //initializeTreeMap();
 
 function initializeTreeMap(treeData) {
