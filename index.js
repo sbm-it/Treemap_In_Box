@@ -76,6 +76,9 @@ var svg = d3.select("#body").append("div")
   .attr("transform", "translate(.5,.5)");
 
 d3.json(dataURIs[0], function(error, json) {
+  console.log(json);
+if (!jQuery.isEmptyObject(json)){
+
   // clean names
   json.children=json.children.map(function(c){
     //if(false){
@@ -107,10 +110,17 @@ d3.json(dataURIs[0], function(error, json) {
   */
 
   initializeTreeMap(json);
-    //preprocessTreemapData(json, 30);
+
+}else{
+
+  $('#body').html('<h1 style="color:grey;background-color:pink;line-height:60px;text-align:center;">Can Not Display</h1>');
+ }
 
 });
-//initializeTreeMap();
+
+
+
+
 
 function initializeTreeMap(treeData) {
   node = root = treeData;
