@@ -58,7 +58,7 @@ var w = 1280 - 80,
   h = 800 - 180,
   x = d3.scale.linear().range([0, w]),
   y = d3.scale.linear().range([0, h]),
-  color = d3.scale.category10(),
+  color = d3.scale.ordinal().range(["#FF5733","#ffcc00" ,"#0040ff"," #33cc33","#ff0066","#33cccc","#ff33cc","#9966ff","#3399ff","#ff3300","#cc99ff","#9900ff","#00ff00"]),
   root,
   node;
 
